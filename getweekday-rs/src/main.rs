@@ -16,7 +16,7 @@ fn main() {
             let month:u32 = match m.parse() {
                 Ok(n)  => {
                     n
-                },
+                }
                 Err(_) => {
                     usage();
                     return;
@@ -26,11 +26,11 @@ fn main() {
             let year:i32 = match y.parse() {
                 Ok(n)  => {
                     n
-                },
+                }
                 Err(_) => {
                     usage();
                     return;
-                },
+                }
             };
 
             let mut d = NaiveDate::from_ymd(year, month, 1);
@@ -59,10 +59,10 @@ fn main() {
                 };
 
             println!("{}", wds[index].format("%a %Y-%m-%d").to_string());
-        },
+        }
         _ => {
             usage();
-        },
+        }
     }
 }
 
